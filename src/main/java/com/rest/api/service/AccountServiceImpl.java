@@ -43,15 +43,13 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public Client loadUserByUserName(String userName) {
-		// TODO Auto-generated method stub
-		return null;
+	public Client loadUserByUserName(String userName) { 
+		return clientRepo.findByName(userName);
 	}
 
 	@Override
-	public List<Client> listClients() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Client> listClients() { 
+		return clientRepo.findAll();
 	} 
 	
 }
